@@ -16,5 +16,6 @@
   outline: none;
   border: none;
   padding-inline: 1em;
+  min-width: 15em;
   background-color: transparent;
 }
