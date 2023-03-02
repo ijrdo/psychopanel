@@ -1,0 +1,66 @@
+.articleList {
+  box-shadow: var(--box-shadow);
+  padding: 1em;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  column-gap: 1em;
+}
+.articleList .title {
+  font-weight: 500;
+  width: 100%;
+}
+.articleList span {
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+}
+.articleList .articleList-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75em;
+}
+
+.articleList .articleList-container .articleList-details {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 6em 1fr;
+  gap: 0.5em;
+  align-items: center;
+}
+.articleList .articleList-container .articleList-details .fileDownload {
+  cursor: pointer;
+}
+.articleList .articleList-container .articleList-details h4 {
+  font-weight: 600;
+}
+
+.articleList-btn {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  justify-self: flex-end;
+  grid-row: 1/4;
+  grid-column: 3/4;
+}
+.articleList-index {
+  grid-row: 1/4;
+  justify-self: center;
+  align-self: center;
+}
+.articleList-keywords {
+  grid-column: 2/3;
+  white-space: pre-wrap;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2em;
+}
+.articleList-keywords > span {
+  font-weight: 500;
+}
+.articleList-primaryAuthor-name > span {
+  font-weight: 500;
+  grid-column: 2/3;
+  gap: 0.5em;
+}

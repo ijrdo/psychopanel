@@ -1,0 +1,36 @@
+#final_review {
+  width: 100%;
+  height: 100%;
+  background-color: var(--secondary-color);
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1em;
+}
+#final_review > div {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: flex-start;
+}
+#final_review > .abstract > p {
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  border: 0.1em solid var(--nav-link-border);
+  max-height: 7.5em;
+  min-height: 6em;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+#final_review > div > h3 {
+  font-weight: 500;
+  white-space: nowrap;
+}
+#final_review > div > p {
+  width: 100%;
+}
+#final_review > div > .btns_publish {
+  display: flex;
+  gap: 2em;
+}

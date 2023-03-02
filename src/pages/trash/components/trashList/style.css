@@ -1,0 +1,19 @@
+.trashList {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+  gap: 3em;
+  box-shadow: var(--box-shadow);
+  min-height: 6em;
+}
+.trashList > .trash_title {
+  text-align: justify;
+}
+
+.trashList > .trash_btns {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}

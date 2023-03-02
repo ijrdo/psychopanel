@@ -1,0 +1,14 @@
+.articles-all-box {
+  padding: 1em 3em;
+  margin: 4em auto;
+  width: 80%;
+  border: 0.01em solid var(--nav-link-border);
+}
+@media (max-aspect-ratio: 1/1), (max-width: 900px) {
+  .articles-all-box {
+    padding: 1em;
+    margin: 5em auto;
+    width: 90%;
+    border: 0.1em solid var(--nav-link-border);
+  }
+}

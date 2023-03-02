@@ -1,0 +1,74 @@
+#publish_popup {
+  position: fixed;
+  background-color: var(--secondary-color);
+  padding: 2em;
+  box-shadow: var(--box-shadow);
+  width: 60em;
+  height: 80vh;
+  top: 50%;
+  left: 50%;
+  z-index: 100000;
+  transform: translate(-50%, -50%);
+  transition: all 0.4s ease;
+  animation: popup 0.4s ease;
+}
+
+#publish_popup #popup_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  align-items: flex-start;
+}
+.overlay {
+  position: absolute;
+  backdrop-filter: blur(0.2em);
+  width: 100%;
+  height: 100vh;
+  top: 0%;
+  left: 0%;
+  z-index: 1000;
+}
+.popupResponse {
+  position: fixed;
+  backdrop-filter: blur(0.2em);
+  width: 100%;
+  height: 100vh;
+  top: 0%;
+  left: 0%;
+  z-index: 1000000;
+}
+
+#publish_popup .publish_popup-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+#publish_popup .publish_popup-info h3 {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: var(--nav-link-border);
+}
+#publish_popup .publish_popup-info span {
+  font-size: 0.8em;
+  font-weight: 400;
+  color: var(--black);
+}
+
+.review_btn-2 {
+  width: 100%;
+}
+.review_btn-2 > div {
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes popup {
+  0% {
+    opacity: 0.35;
+  }
+  100% {
+    opacity: 1;
+  }
+}

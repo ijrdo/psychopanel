@@ -1,0 +1,102 @@
+#login_page {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#login_page .login-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3em 0;
+  width: 60%;
+  box-shadow: var(--box-shadow);
+  background-color: var(--secondary-color);
+}
+
+#login_page .login-card {
+  width: 60%;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+}
+
+#login_page .login-card label {
+  width: 100%;
+  font-size: 1.25em;
+  gap: 0.25em;
+  font-weight: 600;
+  color: var(--nav-link-border);
+  display: flex;
+  flex-direction: column;
+}
+
+#login_page .login-card input {
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  gap: 2em;
+  padding: 0.75em;
+  border: 0.15em solid var(--nav-link-border);
+}
+
+#login_page .login-card input::placeholder {
+  color: var(--primary-color);
+}
+#login_page .forceLogin {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(0.2em);
+}
+#login_page .forceLogin .force_login-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3em;
+  box-shadow: var(--box-shadow);
+  gap: 3em;
+  background-color: var(--secondary-color);
+  border-radius: 1em;
+}
+
+#login_page .login-card .login_button {
+  background-color: var(--black);
+  border-radius: 0.5em;
+  padding-inline: 1.25em;
+  padding-block: 0.75em;
+  cursor: pointer;
+  color: var(--white);
+  font-weight: 700;
+  border: none;
+  white-space: nowrap;
+  max-width: max-content;
+}
+#login_page .login-card .login_button:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 900px) {
+  #login_page {
+    height: 80vh;
+  }
+  #login_page .login-container {
+    width: 90%;
+  }
+  #login_page .login-card label {
+    width: 100%;
+  }
+  #login_page .login-card {
+    width: 100%;
+  }
+}

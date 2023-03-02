@@ -1,0 +1,48 @@
+.error-boundary {
+  margin-block: 4em;
+  padding: 3em;
+  border: 0.5em solid var(--nav-link-border);
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+.error-boundary h2,
+.error-boundary p {
+  text-align: center;
+}
+
+.error-boundary p {
+  width: 80%;
+  font-size: 1.5em;
+  padding-block: 1em;
+}
+.error-boundary button {
+  background-color: var(--black);
+  border-radius: 0.5em;
+  padding-inline: 1.25em;
+  padding-block: 0.75em;
+  cursor: pointer;
+  color: var(--white);
+  font-weight: 700;
+  border: none;
+  white-space: nowrap;
+  max-width: max-content;
+}
+.error-boundary button:hover {
+  text-decoration: underline;
+}
+
+@media (max-aspect-ratio: 1/1), (max-width: 900px) {
+  .error-boundary {
+    margin-inline: 1em;
+    padding: 1em;
+  }
+
+  .error-boundary p {
+    width: 100%;
+    padding-block: 0.75em;
+  }
+}

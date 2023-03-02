@@ -1,0 +1,20 @@
+#Unpublish_now {
+  width: 80%;
+  margin-block: 1em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2em;
+}
+
+#Unpublish_now .search_article {
+  display: flex;
+  border: 0.2em solid var(--nav-link-border);
+  border-radius: 0.5em;
+}
+#Unpublish_now .search_article input {
+  outline: none;
+  border: none;
+  padding-inline: 1em;
+  background-color: transparent;
+}

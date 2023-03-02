@@ -1,0 +1,22 @@
+#HeaderAdmin {
+  width: 80%;
+  display: flex;
+  padding-block: 1em;
+  padding-inline: 2em;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--secondary-color);
+  box-shadow: var(--box-shadow);
+}
+#HeaderAdmin img {
+  width: 20em;
+}
+
+#HeaderAdmin > div {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+#HeaderAdmin > div .headerAdmin-icon {
+  width: 1.5em;
+}

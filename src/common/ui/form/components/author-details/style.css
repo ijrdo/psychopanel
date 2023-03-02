@@ -1,0 +1,68 @@
+/* .AuthorInfo-form{
+    width: 80%;
+} */
+
+#AuthorForm{
+    /* border: 0.4em solid var(--nav-link-border); */
+    border-radius: 1em;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    background-color: var(--secondary-color);
+}
+
+.BtnRemove-author{
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.17em;
+}
+
+.subheading-box{
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    padding-block: 2em;
+}
+
+.AuthorInfo{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+}
+
+.AuthorInfo:first-child{
+    grid-template-columns: row;
+}
+
+
+.AuthorInfo-heading,
+.AuthorInfo-subheading {
+  grid-column: 1/-1;
+  font-weight: 600;
+}
+
+.AuthorForm-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5em;
+}
+
+.AuthorForm-label{
+    width: 100%;
+}
+
+.AuthorForm-input {
+    width: 100%;
+    padding: 0.8em;
+    outline-color: var(--nav-link-border);
+}
+
+@media (max-aspect-ratio: 1/1), (max-width: 900px) {
+    .AuthorInfo {
+      grid-template-columns: 1fr;
+    }
+  }
