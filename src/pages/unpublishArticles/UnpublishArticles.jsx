@@ -7,8 +7,7 @@ import { useAuth } from "app-manager/auth/AuthProvider";
 import ErrorBoundary from "pages/error-boundary/ErrorBoundary";
 import search from "assets/media/svg/search.svg";
 import { usePanelData } from "app-manager/panel-context/PanelProvider";
-import NotFound from "pages/error-404/NotFound";
-
+import NotFound from "common/ui/notFound/NotFound";
 export default function UnpublishArticles() {
   const { token, sessionId } = useAuth();
   const { state, dispatch } = usePanelData();

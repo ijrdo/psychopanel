@@ -7,7 +7,7 @@ import React from "react";
 import ReviewArticle from "./components/reviewArticle/ReviewArticle";
 import "./style.css";
 import search from "assets/media/svg/search.svg";
-import NotFound from "pages/error-404/NotFound";
+import NotFound from "common/ui/notFound/NotFound";
 export default function ReviewArticles() {
   const { token, sessionId } = useAuth();
   const { state, dispatch } = usePanelData();

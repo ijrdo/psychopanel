@@ -1,7 +1,43 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("assets/fonts/RobotoMono-ExtraLight.woff2");
+  font-style: normal;
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/fonts/RobotoMono-Light.woff2");
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/fonts/RobotoMono-Regular.woff2");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/fonts/RobotoMono-Medium.woff2");
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/fonts/RobotoMono-SemiBold.woff2");
+  font-style: normal;
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/fonts/RobotoMono-Bold.woff2");
+  font-style: normal;
+  font-weight: 700;
+}
 * {
   margin: 0;
   padding: 0;
-  font-family: "Montserrat";
+  font-family: "Roboto Mono", monospace;
   font-weight: 400;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;

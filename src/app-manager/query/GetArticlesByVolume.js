@@ -3,15 +3,18 @@ import { useQuery } from "@tanstack/react-query";
 
 const getArticles = (volume, issue) => {
   const articles = axios
-    .get(process.env.REACT_APP_API_LINK_BY_VOL, {
-      headers: {
-        "x-api-key": process.env.REACT_APP_API_KEY,
-      },
-      params: {
-        volume: volume,
-        issue: issue,
-      },
-    })
+    .get(
+      "https://whkkg99fl7.execute-api.us-east-2.amazonaws.com/5ca34674s6/search/articles",
+      {
+        headers: {
+          "x-api-key": "beL2l7aY9N17CT49sQcmC9mNKyARq2KX6MRisGfv",
+        },
+        params: {
+          volume: volume,
+          issue: issue,
+        },
+      }
+    )
     .then((res) => res.data);
   return articles;
 };

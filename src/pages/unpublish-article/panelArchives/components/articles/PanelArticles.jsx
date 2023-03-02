@@ -7,6 +7,7 @@ import "./styles.css";
 
 export default function PanelArticles() {
   const { vol, issue } = useParams();
+  console.log(vol, issue);
 
   const { data, isLoading, isError, refetch } = useArticles(vol, issue);
 

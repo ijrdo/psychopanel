@@ -24,6 +24,7 @@ export default function Form() {
   const {
     refetch: addArticle,
     isFetching: adding,
+    isSuccess: created,
     error: addingError,
   } = useAddArticle(token, submit, sessionId, dispatch);
 
@@ -31,6 +32,7 @@ export default function Form() {
     refetch: updateArticle,
     isFetching: updating,
     error: updatingError,
+    isSuccess: updated,
   } = useUpdateArticle(token, submit, sessionId, dispatch);
 
   const setArticleFile = (e) => {
@@ -109,6 +111,7 @@ export default function Form() {
         <FormResponse
           error={addingError || updatingError}
           refetch={addArticle || updateArticle}
+          success={created || updated}
         />
       )}
     </div>

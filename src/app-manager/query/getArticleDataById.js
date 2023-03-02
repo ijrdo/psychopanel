@@ -4,9 +4,9 @@ import { useQuery } from "@tanstack/react-query";
 const getArticle = (id) => {
   const article = axios({
     method: "GET",
-    url: process.env.REACT_APP_API_LINK_BY_ID,
+    url: "https://whkkg99fl7.execute-api.us-east-2.amazonaws.com/2onxu2g92m/article",
     headers: {
-      "x-api-key": process.env.REACT_APP_API_KEY,
+      "x-api-key": "beL2l7aY9N17CT49sQcmC9mNKyARq2KX6MRisGfv",
     },
     params: {
       articleId: id,

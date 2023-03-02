@@ -10,7 +10,7 @@ import ResponsePopup from "common/ui/responsePopup/ResponsePopUp";
 import React from "react";
 import "./style.css";
 import { useParams } from "react-router";
-import NotFound from "pages/error-404/NotFound";
+import NotFound from "pages/error-404/PageNotFound";
 export default function ArticleInfo() {
   const { articleId: id } = useParams();
   const { token, sessionId } = useAuth();

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router";
 import { PanelButton } from "common/ui/panelButton/PanelButton";
 import "./style.css";
 
-const NotFound = () => {
+const PageNotFound = () => {
   const navigate = useNavigate();
   return (
     <div id="error">
@@ -14,4 +14,4 @@ const NotFound = () => {
     </div>
   );
 };
-export default NotFound;
+export default PageNotFound;

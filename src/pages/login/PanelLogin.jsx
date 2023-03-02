@@ -10,12 +10,12 @@ export default function PanelLogin() {
   const { userName, passkey } = auth;
   const dispatch = useAuthDispatch();
 
-  const { refetch: login, isFetching: loginin } = useLoginData(
+  const { refetch: login, isFetching: logging } = useLoginData(
     userName,
     passkey,
     dispatch
   );
-  const { refetch: forceLogin, isFetching: forceLoginin } = useForceLogin(
+  const { refetch: forceLogin, isFetching: forceLogging } = useForceLogin(
     userName,
     passkey,
     dispatch
@@ -54,7 +54,7 @@ export default function PanelLogin() {
               placeholder="Password"
             />
           </label>
-          <PanelButton sending={loginin} className="login_button" type="submit">
+          <PanelButton sending={logging} className="login_button" type="submit">
             Login
           </PanelButton>
         </form>
@@ -63,7 +63,7 @@ export default function PanelLogin() {
         <div className="forceLogin">
           <div className="force_login-card">
             <h2>Other Session is Running</h2>
-            <PanelButton sending={forceLoginin} onClick={forceLoginFn}>
+            <PanelButton sending={forceLogging} onClick={forceLoginFn}>
               Terminate Other Session
             </PanelButton>
           </div>

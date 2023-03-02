@@ -3,7 +3,7 @@ import React from "react";
 import { useLocation, useNavigate } from "react-router";
 import { PanelButton } from "common/ui/panelButton/PanelButton";
 import { usePanelData } from "app-manager/panel-context/PanelProvider";
-export default function FormResponse({ error, refetch }) {
+export default function FormResponse({ error, refetch, success }) {
   const { dispatch } = usePanelData();
   const { pathname } = useLocation();
   const navigate = useNavigate();
@@ -29,23 +29,24 @@ export default function FormResponse({ error, refetch }) {
         </div>
       </>
     );
-  return (
-    <>
-      <div className="backdrop"></div>
-      <div className="Form-Response">
-        <h2>
-          Article {pathname.includes("add") ? "Created " : "Updated "}
-          Successfully
-        </h2>
-        <div className="form-response_btns">
-          <PanelButton onClick={exitResponse}>Back To Dashboard</PanelButton>
-          {pathname.includes("add") && (
-            <PanelButton onClick={createAnother}>
-              Create Another Article
-            </PanelButton>
-          )}
+  if (success)
+    return (
+      <>
+        <div className="backdrop"></div>
+        <div className="Form-Response">
+          <h2>
+            Article {pathname.includes("add") ? "Created " : "Updated "}
+            Successfully
+          </h2>
+          <div className="form-response_btns">
+            <PanelButton onClick={exitResponse}>Back To Dashboard</PanelButton>
+            {pathname.includes("add") && (
+              <PanelButton onClick={createAnother}>
+                Create Another Article
+              </PanelButton>
+            )}
+          </div>
         </div>
-      </div>
-    </>
-  );
+      </>
+    );
 }

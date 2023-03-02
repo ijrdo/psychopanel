@@ -5,7 +5,7 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 import React, { lazy, Suspense } from "react";
-import NotFound from "pages/error-404/NotFound";
+import NotFound from "pages/error-404/PageNotFound";
 import Loading from "common/ui/loading/Loading";
 import Trash from "pages/trash/Trash";
 import DashboardRoot from "common/root/dashboard-root/DashboardRoot";
