@@ -1,14 +1,13 @@
 import Loading from "common/ui/loading/Loading";
 import ErrorBoundary from "pages/error-boundary/ErrorBoundary";
-import { useAuth } from "pages/src/panel/app-manager/auth/AuthProvider";
-import { usePanelData } from "pages/src/panel/app-manager/panel-context/PanelProvider";
-import { useReviewArticlesData } from "pages/src/panel/app-manager/query/getReviewArticles";
+import { useAuth } from "app-manager/auth/AuthProvider";
+import { usePanelData } from "app-manager/panel-context/PanelProvider";
+import { useReviewArticlesData } from "app-manager/query/getReviewArticles";
 import React from "react";
 import ReviewArticle from "./components/reviewArticle/ReviewArticle";
 import "./style.css";
 import search from "assets/media/svg/search.svg";
-import NotFound from "common/ui/notFound/NotFound";
-
+import NotFound from "pages/error-404/NotFound";
 export default function ReviewArticles() {
   const { token, sessionId } = useAuth();
   const { state, dispatch } = usePanelData();

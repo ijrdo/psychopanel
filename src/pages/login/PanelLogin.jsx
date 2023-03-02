@@ -1,9 +1,6 @@
 import "./style.css";
 import logoHeader from "assets/media/svg/logo-header.svg";
-import {
-  useAuth,
-  useAuthDispatch,
-} from "pages/src/panel/app-manager/auth/AuthProvider";
+import { useAuth, useAuthDispatch } from "app-manager/auth/AuthProvider";
 import { PanelButton } from "../../common/ui/panelButton/PanelButton";
 import { useLoginData } from "../../app-manager/query/login";
 import { useForceLogin } from "../../app-manager/query/forceLogin";

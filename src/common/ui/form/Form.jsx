@@ -98,7 +98,7 @@ export default function Form() {
                 type="submit"
                 className="form-btn"
               >
-                {pathname === "/panel/dashboard/edit-form" ? "Update" : "Save"}
+                {pathname === "/edit-form" ? "Update" : "Save"}
               </PanelButton>
             </div>
           </>

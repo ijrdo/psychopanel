@@ -1,14 +1,14 @@
-import { usePanelData } from "pages/src/panel/app-manager/panel-context/PanelProvider";
-import { PanelButton } from "pages/src/panel/common/ui/panelButton/PanelButton";
-import { PanelLink } from "pages/src/panel/common/ui/panelLink/PanelLink";
+import { usePanelData } from "app-manager/panel-context/PanelProvider";
+import { PanelButton } from "common/ui/panelButton/PanelButton";
+import { PanelLink } from "common/ui/panelLink/PanelLink";
 import fileDownload from "assets/media/svg/fileDownload.svg";
 import React from "react";
 import "./style.css";
 import edit from "assets/media/svg/edit.svg";
-import { deleteArticle } from "pages/src/panel/app-manager/query/deleteArticle";
-import { useAuth } from "pages/src/panel/app-manager/auth/AuthProvider";
+import { deleteArticle } from "app-manager/query/deleteArticle";
+import { useAuth } from "app-manager/auth/AuthProvider";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import changeState from "pages/src/panel/app-manager/query/changeState";
+import changeState from "app-manager/query/changeState";
 
 export default function UnpublishArticle({ article, index }) {
   const queryClient = useQueryClient();
@@ -84,10 +84,7 @@ export default function UnpublishArticle({ article, index }) {
         </div>
       </div>
       <div className="articleList-btn">
-        <PanelLink
-          to="/panel/dashboard/edit-form"
-          onClick={() => setArticle(article)}
-        >
+        <PanelLink to="edit-form" onClick={() => setArticle(article)}>
           <img className="articleList-icon" src={edit} alt="" />
         </PanelLink>
         <PanelButton

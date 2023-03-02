@@ -1,10 +1,10 @@
-import { useAuth } from "pages/src/panel/app-manager/auth/AuthProvider";
-import { restoreTrash } from "pages/src/panel/app-manager/query/restoreTrash";
-import { deletePermanent } from "pages/src/panel/app-manager/query/permanentDelete";
-import { PanelButton } from "pages/src/panel/common/ui/panelButton/PanelButton";
+import { useAuth } from "app-manager/auth/AuthProvider";
+import { restoreTrash } from "app-manager/query/restoreTrash";
+import { deletePermanent } from "app-manager/query/permanentDelete";
+import { PanelButton } from "common/ui/panelButton/PanelButton";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import "./style.css";
-import { usePanelData } from "pages/src/panel/app-manager/panel-context/PanelProvider";
+import { usePanelData } from "app-manager/panel-context/PanelProvider";
 
 export default function TrashList({ article }) {
   const queryClient = useQueryClient();

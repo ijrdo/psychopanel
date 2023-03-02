@@ -1,13 +1,13 @@
 import React from "react";
 import "./style.css";
 import UnpublishArticle from "./components/unpublishArticle/UnpublishArticle";
-import { useUnpublishedArticlesData } from "pages/src/panel/app-manager/query/getUnpublishedArticles";
+import { useUnpublishedArticlesData } from "app-manager/query/getUnpublishedArticles";
 import Loading from "common/ui/loading/Loading";
-import { useAuth } from "pages/src/panel/app-manager/auth/AuthProvider";
+import { useAuth } from "app-manager/auth/AuthProvider";
 import ErrorBoundary from "pages/error-boundary/ErrorBoundary";
 import search from "assets/media/svg/search.svg";
-import { usePanelData } from "pages/src/panel/app-manager/panel-context/PanelProvider";
-import NotFound from "common/ui/notFound/NotFound";
+import { usePanelData } from "app-manager/panel-context/PanelProvider";
+import NotFound from "pages/error-404/NotFound";
 
 export default function UnpublishArticles() {
   const { token, sessionId } = useAuth();

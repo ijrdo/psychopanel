@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { PanelButton } from "pages/src/panel/common/ui/panelButton/PanelButton";
-import { usePanelData } from "pages/src/panel/app-manager/panel-context/PanelProvider";
-import PopUpMain from "pages/src/panel/common/ui/publishPopup/PopUpMain";
+import { PanelButton } from "common/ui/panelButton/PanelButton";
+import { usePanelData } from "app-manager/panel-context/PanelProvider";
+import PopUpMain from "common/ui/publishPopup/PopUpMain";
 import fileDownload from "assets/media/svg/fileDownload.svg";
-import { useDownloadFile } from "pages/src/panel/app-manager/query/downloadFile";
-import { useAuth } from "pages/src/panel/app-manager/auth/AuthProvider";
+import { useDownloadFile } from "app-manager/query/downloadFile";
+import { useAuth } from "app-manager/auth/AuthProvider";
 
 export default function ReadyArticle({ article, index }) {
   const { token, sessionId } = useAuth();

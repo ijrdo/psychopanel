@@ -1,5 +1,5 @@
 import "./styles.css";
-import { useArchives } from "app/network-query/GetArchives";
+import { useArchives } from "app-manager/query/GetArchives";
 import { Link } from "react-router-dom";
 import Loading from "common/ui/loading/Loading";
 import ErrorBoundary from "pages/error-boundary/ErrorBoundary";

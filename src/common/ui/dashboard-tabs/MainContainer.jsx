@@ -4,11 +4,12 @@ import { useLocation } from "react-router-dom";
 
 const MainContainer = () => {
   const { pathname } = useLocation();
+  console.log(pathname);
   return (
     <div className="paneltab_links">
       <Link
         className={
-          (pathname === "/panel/dashboard" ? "active" : null) ||
+          (pathname === "/" ? "active" : null) ||
           pathname.includes("ready-articles")
             ? "active"
             : ""

@@ -13,7 +13,7 @@ export default function FormResponse({ error, refetch }) {
   const exitResponse = () => {
     dispatch({ type: "SHOW_FORM_RESPONSE", payload: false });
     if (!error) {
-      return navigate("/panel/dashboard");
+      return navigate("/");
     }
   };
   if (error)

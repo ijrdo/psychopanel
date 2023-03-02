@@ -1,14 +1,14 @@
-import { usePanelData } from "pages/src/panel/app-manager/panel-context/PanelProvider";
-import { PanelButton } from "pages/src/panel/common/ui/panelButton/PanelButton";
-import { PanelLink } from "pages/src/panel/common/ui/panelLink/PanelLink";
+import { usePanelData } from "app-manager/panel-context/PanelProvider";
+import { PanelButton } from "common/ui/panelButton/PanelButton";
+import { PanelLink } from "common/ui/panelLink/PanelLink";
 import fileDownload from "assets/media/svg/fileDownload.svg";
 import React from "react";
-import { useAuth } from "pages/src/panel/app-manager/auth/AuthProvider";
+import { useAuth } from "app-manager/auth/AuthProvider";
 import edit from "assets/media/svg/edit.svg";
 import "./style.css";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { deleteArticle } from "pages/src/panel/app-manager/query/deleteArticle";
-import changeState from "pages/src/panel/app-manager/query/changeState";
+import { deleteArticle } from "app-manager/query/deleteArticle";
+import changeState from "app-manager/query/changeState";
 
 export default function ReviewArticle({ article, index }) {
   const queryClient = useQueryClient();
@@ -80,7 +80,7 @@ export default function ReviewArticle({ article, index }) {
       </div>
       <div className="articleList-btn">
         <PanelLink
-          to="/panel/dashboard/edit-form"
+          to="edit-form"
           onClick={() => setArticle(article)}
         >
           <img className="articleList-icon" src={edit} alt="edit_icn" />

@@ -46,7 +46,7 @@ const PanelHeader = () => {
           content={state?.notification?.message}
         />
       )}
-      <Link to="/panel/dashboard">
+      <Link to="">
         <img src={logo} alt="panel_logo" />
       </Link>
       <div>

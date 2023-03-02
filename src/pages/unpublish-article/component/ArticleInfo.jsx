@@ -1,17 +1,16 @@
 /* eslint-disable no-unused-vars */
 import Loading from "common/ui/loading/Loading";
-import { useAuth } from "pages/src/panel/app-manager/auth/AuthProvider";
-import { usePanelData } from "pages/src/panel/app-manager/panel-context/PanelProvider";
-import { useGetArticleById } from "pages/src/panel/app-manager/query/getArticleDataById";
-import { useRedactArticle } from "pages/src/panel/app-manager/query/redactArticle";
-import { useUnpublishFn } from "pages/src/panel/app-manager/query/unpublishArticle";
-import { PanelButton } from "pages/src/panel/common/ui/panelButton/PanelButton";
-import ResponsePopup from "pages/src/panel/common/ui/responsePopup/ResponsePopUp";
+import { useAuth } from "app-manager/auth/AuthProvider";
+import { usePanelData } from "app-manager/panel-context/PanelProvider";
+import { useGetArticleById } from "app-manager/query/getArticleDataById";
+import { useRedactArticle } from "app-manager/query/redactArticle";
+import { useUnpublishFn } from "app-manager/query/unpublishArticle";
+import { PanelButton } from "common/ui/panelButton/PanelButton";
+import ResponsePopup from "common/ui/responsePopup/ResponsePopUp";
 import React from "react";
 import "./style.css";
 import { useParams } from "react-router";
-import Error404 from "pages/src/panel/common/ui/dashboard-root/error-404/404";
-
+import NotFound from "pages/error-404/NotFound";
 export default function ArticleInfo() {
   const { articleId: id } = useParams();
   const { token, sessionId } = useAuth();
@@ -137,5 +136,5 @@ export default function ArticleInfo() {
       </>
     );
   }
-  return <Error404 />;
+  return <NotFound />;
 }

@@ -10,9 +10,7 @@ const NotFound = () => {
       <h1>404</h1>
       <h2>OOPS!</h2>
       <h2>Page Not Found</h2>
-      <PanelButton onClick={() => navigate("/panel/dashboard")}>
-        Back To Dashboard
-      </PanelButton>
+      <PanelButton onClick={() => navigate("/")}>Back To Dashboard</PanelButton>
     </div>
   );
 };

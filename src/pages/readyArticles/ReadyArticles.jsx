@@ -1,13 +1,12 @@
 import Loading from "common/ui/loading/Loading";
 import ErrorBoundary from "pages/error-boundary/ErrorBoundary";
-import { useAuth } from "pages/src/panel/app-manager/auth/AuthProvider";
-import { useReadyArticlesData } from "pages/src/panel/app-manager/query/getReadyArticles";
+import { useAuth } from "app-manager/auth/AuthProvider";
+import { useReadyArticlesData } from "app-manager/query/getReadyArticles";
 import ReadyArticle from "./components/ReadyArticle";
 import "./style.css";
 import search from "assets/media/svg/search.svg";
-import { usePanelData } from "pages/src/panel/app-manager/panel-context/PanelProvider";
-import NotFound from "common/ui/notFound/NotFound";
-
+import { usePanelData } from "app-manager/panel-context/PanelProvider";
+import NotFound from "pages/error-404/NotFound";
 export default function ReadyArticles() {
   const { state, dispatch } = usePanelData();
   const { token, sessionId } = useAuth();

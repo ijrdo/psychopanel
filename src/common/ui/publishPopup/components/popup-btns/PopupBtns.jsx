@@ -42,7 +42,7 @@ export default function PopupBtns({ article, show }) {
 
   return (
     <div className="popupBtns">
-      <PanelLink to="/panel/dashboard/edit-form" onClick={setArticle}>
+      <PanelLink to="edit-form" onClick={setArticle}>
         <img className="articleList-icon" src={edit} alt="" />
       </PanelLink>
       <PanelLink onClick={deleteArticleHandler}>

@@ -1,4 +1,4 @@
-import { useArticles } from "app/network-query/GetArticlesByVolume";
+import { useArticles } from "app-manager/query//GetArticlesByVolume";
 import Loading from "common/ui/loading/Loading";
 import ErrorBoundary from "pages/error-boundary/ErrorBoundary";
 import { useParams } from "react-router";

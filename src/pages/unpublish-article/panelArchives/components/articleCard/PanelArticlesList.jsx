@@ -1,5 +1,5 @@
-import { usePanelData } from "pages/src/panel/app-manager/panel-context/PanelProvider";
-import ResponsePopup from "pages/src/panel/common/ui/responsePopup/ResponsePopUp";
+import { usePanelData } from "app-manager/panel-context/PanelProvider";
+import ResponsePopup from "common/ui/responsePopup/ResponsePopUp";
 import React from "react";
 import PanelArticleCard from "./PanelArticleCard";
 

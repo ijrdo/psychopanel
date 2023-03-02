@@ -1,12 +1,12 @@
 import "./styles.css";
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { usePanelData } from "pages/src/panel/app-manager/panel-context/PanelProvider";
-import { useAuth } from "pages/src/panel/app-manager/auth/AuthProvider";
-import { useUnpublishFn } from "pages/src/panel/app-manager/query/unpublishArticle";
-import { useRedactArticle } from "pages/src/panel/app-manager/query/redactArticle";
-import { PanelButton } from "pages/src/panel/common/ui/panelButton/PanelButton";
-import { useDownloadFile } from "pages/src/panel/app-manager/query/downloadFile";
+import { usePanelData } from "app-manager/panel-context/PanelProvider";
+import { useAuth } from "app-manager/auth/AuthProvider";
+import { useUnpublishFn } from "app-manager/query/unpublishArticle";
+import { useRedactArticle } from "app-manager/query/redactArticle";
+import { PanelButton } from "common/ui/panelButton/PanelButton";
+import { useDownloadFile } from "app-manager/query/downloadFile";
 
 export default function PanelArticleCard({ article }) {
   const { token, sessionId } = useAuth();

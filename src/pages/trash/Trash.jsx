@@ -1,5 +1,5 @@
 import Loading from "common/ui/loading/Loading";
-import NotFound from "common/ui/notFound/NotFound";
+import NotFound from "pages/error-404/NotFound";
 import ErrorBoundary from "pages/error-boundary/ErrorBoundary";
 import React from "react";
 import { useAuth } from "../../app-manager/auth/AuthProvider";
