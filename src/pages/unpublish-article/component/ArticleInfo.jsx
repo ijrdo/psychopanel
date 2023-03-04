@@ -4,7 +4,7 @@ import { useAuth } from "app-manager/auth/AuthProvider";
 import { usePanelData } from "app-manager/panel-context/PanelProvider";
 import { useGetArticleById } from "app-manager/query/getArticleDataById";
 import { useRedactArticle } from "app-manager/query/redactArticle";
-import { useUnpublishFn } from "app-manager/query/unpublishArticle";
+// import { useUnpublishFn } from "app-manager/query/unpublishArticle";
 import { PanelButton } from "common/ui/panelButton/PanelButton";
 import ResponsePopup from "common/ui/responsePopup/ResponsePopUp";
 import React from "react";
@@ -19,13 +19,13 @@ export default function ArticleInfo() {
 
   const { isFetching, data } = useGetArticleById(id);
 
-  const { refetch: unpublishNow, isFetching: unpublishing } = useUnpublishFn(
-    token,
-    sessionId,
-    data?.articleId,
-    data?.startPage,
-    dispatch
-  );
+  // const { refetch: unpublishNow, isFetching: unpublishing } = useUnpublishFn(
+  //   token,
+  //   sessionId,
+  //   data?.articleId,
+  //   data?.startPage,
+  //   dispatch
+  // );
   const { refetch: redactNow, isFetching: redacting } = useRedactArticle(
     token,
     sessionId,
@@ -52,9 +52,9 @@ export default function ArticleInfo() {
       doiPrefix,
     } = data;
 
-    const unpublish = () => {
-      unpublishNow();
-    };
+    // const unpublish = () => {
+    //   unpublishNow();
+    // };
 
     const redact = () => {
       redactNow();
@@ -69,11 +69,11 @@ export default function ArticleInfo() {
                 <PanelButton sending={redacting} onClick={redact}>
                   Redact
                 </PanelButton>
-                {/* <PanelButton sending={unpublishing} onClick={unpublish}>
-                Unpublish
-              </PanelButton> */}
               </>
             )}
+            {/* <PanelButton sending={unpublishing} onClick={unpublish}>
+              Unpublish
+            </PanelButton> */}
           </div>
 
           <h2 className={data?.isRedacted ? "redacted" : ""}> {title}</h2>

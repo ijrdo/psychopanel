@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { usePanelData } from "app-manager/panel-context/PanelProvider";
 import { useAuth } from "app-manager/auth/AuthProvider";
-import { useUnpublishFn } from "app-manager/query/unpublishArticle";
+// import { useUnpublishFn } from "app-manager/query/unpublishArticle";
 import { useRedactArticle } from "app-manager/query/redactArticle";
 import { PanelButton } from "common/ui/panelButton/PanelButton";
 import { useDownloadFile } from "app-manager/query/downloadFile";
@@ -18,13 +18,13 @@ export default function PanelArticleCard({ article }) {
   const { dispatch } = usePanelData();
   const [status, setStatus] = useState("Download");
   const navigate = useNavigate();
-  const { refetch: unpublishNow, isFetching: unpublishing } = useUnpublishFn(
-    token,
-    sessionId,
-    article?.articleId,
-    article?.startPage,
-    dispatch
-  );
+  // const { refetch: unpublishNow, isFetching: unpublishing } = useUnpublishFn(
+  //   token,
+  //   sessionId,
+  //   article?.articleId,
+  //   article?.startPage,
+  //   dispatch
+  // );
   const { refetch: redactNow, isFetching: redacting } = useRedactArticle(
     token,
     sessionId,
@@ -43,9 +43,9 @@ export default function PanelArticleCard({ article }) {
     if (isError) setStatus("Error");
   }, [isFetched, isError]);
 
-  const unpublish = () => {
-    unpublishNow();
-  };
+  // const unpublish = () => {
+  //   unpublishNow();
+  // };
 
   const redact = () => {
     redactNow();
