@@ -6,6 +6,7 @@
   cursor: pointer;
   font-weight: 600;
   padding-block: 0.65em;
+  font-size: 14px;
   white-space: nowrap;
   padding-inline: 2em;
 }

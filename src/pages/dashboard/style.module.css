@@ -1,4 +1,11 @@
 .dashboard {
-  flex: 4;
+  flex: 6;
   height: 100vh;
+}
+
+@media screen, (min-width: 1900px) {
+  .dashboard {
+    flex: 9;
+    height: 100vh;
+  }
 }

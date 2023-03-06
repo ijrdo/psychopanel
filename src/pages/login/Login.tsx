@@ -1,6 +1,6 @@
 import { ChangeEvent, FormEvent } from "react";
 import PrimaryButton from "common/ui/primary-button/PrimaryButton";
-import styles from "./login.module.css";
+import styles from "./style.module.css";
 import user from "assets/svg/userIcon.svg";
 import pass from "assets/svg/passkey.svg";
 import logo from "assets/svg/logo-header.svg";
@@ -21,8 +21,8 @@ export default function Login() {
     dispatch({ type: "SET_PASSWORD", payload: e.target.value });
   };
 
-  console.log(username, password);
   const { refetch } = useLoginData(username, password, dispatch);
+
   const submitForm = (e: FormEvent) => {
     e.preventDefault();
     refetch();
