@@ -47,16 +47,17 @@ body {
 #root {
   --white: #fff;
   --black: #000;
-  --primary-color: #e2eafc;
+  --primary-color: #ededed;
   --secondary-color: #d7e3fc;
   --btn-hover: #0d1821;
+  --link-hover: #e3e5e7a2;
 }
 
 .App {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
+  align-items: flex-start;
+  width: 100vw;
+  height: 100vh;
   background-color: var(--primary-color);
 }
 

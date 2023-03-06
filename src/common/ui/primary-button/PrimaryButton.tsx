@@ -1,4 +1,4 @@
-import { PrimaryBTN } from "../../../types/ui";
+import { PrimaryBTN } from "types/ui";
 import styles from "./style.module.css";
 export default function PrimaryButton({ children, type, onClick }: PrimaryBTN) {
   return (

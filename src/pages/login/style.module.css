@@ -1,0 +1,50 @@
+.loginContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+.loginContainer h1 {
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+.logo {
+  width: 25em;
+  padding-bottom: 1em;
+}
+.passIcon {
+  padding: 0.1em;
+  transform: rotate(-90deg);
+}
+.loginForm {
+  padding: 2em;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  border-radius: 1em;
+}
+.formLabel {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 0.5em;
+  width: 85%;
+  padding: 0.75em;
+  display: flex;
+  gap: 0.5em;
+  background-color: var(--white);
+}
+.formLabel > div {
+  height: 1.5em;
+  width: 1px;
+  background-color: var(--black);
+}
+.formLabel input {
+  width: 100%;
+  outline: none;
+  border: none;
+  font-size: 18px;
+}

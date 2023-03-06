@@ -1,0 +1,17 @@
+.link,
+.active {
+  width: 100%;
+  text-decoration: none;
+  color: var(--black);
+  cursor: pointer;
+  font-weight: 600;
+  padding-block: 0.65em;
+  white-space: nowrap;
+  padding-inline: 2em;
+}
+.link:hover {
+  background-color: var(--link-hover);
+}
+.active {
+  background-color: var(--secondary-color);
+}

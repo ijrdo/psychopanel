@@ -1,3 +1,4 @@
+import { useAuthState } from "context-provider/auth-context/ContextProvider";
 import { ReactNode } from "react";
 import Login from "../../../pages/login/Login";
 
@@ -6,7 +7,7 @@ type Props = {
 };
 
 export default function RoutesAuth({ children }: Props) {
-  const token = false;
+  const { token } = useAuthState();
   if (token) return <>{children}</>;
   return <Login />;
 }
