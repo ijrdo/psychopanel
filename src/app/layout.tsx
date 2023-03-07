@@ -22,7 +22,9 @@ export default function RootLayout(
   return (
     <html lang="en" className={inter.className}>
       <body>
-        <SessionProvider session={session}>{children}</SessionProvider>
+        <SessionProvider session={session}>
+          <div>{children}</div>
+        </SessionProvider>
       </body>
     </html>
   );
